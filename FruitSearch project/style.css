@@ -26,21 +26,26 @@ input[type="text"]:focus {
 .search-container {
   text-align: center;
   margin-top: 100px;
+  position: relative;
 }
 
 .suggestions {
-  /* Remove display: none; */
   position: absolute;
+  top: 100%; /* Position it below the search bar */
+  left: 50%; /* Move it to the center horizontally */
+  transform: translateX(-50%); /* Adjust to center horizontally */
   width: 300px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
-  list-style: none;
+  display: none;
+  z-index: 1; /* Ensure it's on top of other elements */
 }
 
 
 ul.has-suggestions {
   display: block;
+  list-style: none;
 }
 
 ul li {
